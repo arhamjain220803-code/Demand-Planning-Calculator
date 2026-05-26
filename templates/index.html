@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Frido Replenishment System</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+
+            font-family:'Poppins',sans-serif;
+            background:linear-gradient(135deg,#2563eb,#1e3a8a);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .card{
+
+            background:white;
+            padding:50px;
+            border-radius:20px;
+            width:500px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        h1{
+
+            color:#1e3a8a;
+            margin-bottom:10px;
+        }
+
+        p{
+
+            margin-bottom:30px;
+            color:#666;
+        }
+
+        input{
+
+            width:100%;
+            padding:14px;
+            margin-top:10px;
+            margin-bottom:20px;
+            border:1px solid #ddd;
+            border-radius:10px;
+        }
+
+        button{
+
+            width:100%;
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:15px;
+            border-radius:10px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+
+            background:#1d4ed8;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Frido Replenishment</h1>
+
+        <p>
+
+            Upload sales and inventory files to generate replenishment recommendations.
+
+        </p>
+
+        <form
+            action="/process"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <label>Sales File</label>
+
+            <input
+                type="file"
+                name="sales_file"
+                required
+            >
+
+            <label>Inventory Snapshot File</label>
+
+            <input
+                type="file"
+                name="inventory_file"
+                required
+            >
+
+            <button type="submit">
+
+                Generate Dashboard
+
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
