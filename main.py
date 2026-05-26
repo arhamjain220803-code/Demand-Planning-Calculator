@@ -64,7 +64,6 @@ def upload_files():
 
         sales_df = pd.read_excel(
             sales_path,
-            sheet_name="data(7)",
             engine="openpyxl"
         )
 
