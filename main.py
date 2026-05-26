@@ -61,12 +61,23 @@ def upload_files():
         # D = SKU
         # E = TOTAL QTY
         # =========================================
+        # =========================================
+# READ SALES FILE
+# =========================================
 
-        sales_df = pd.read_excel(
-            sales_path,
-            engine="openpyxl"
+        if sales_path.endswith(".csv"):
+
+           sales_df = pd.read_csv(
+           sales_path
         )
 
+        else:
+
+           sales_df = pd.read_excel(
+           sales_path,
+           engine="openpyxl"
+        )
+        
         sales_df = sales_df.iloc[:, [3, 4]]
 
         sales_df.columns = [
@@ -180,10 +191,20 @@ def upload_files():
         # C = ITEM NAME
         # =========================================
 
-        item_master = pd.read_excel(
-            "master/item_master.xlsx",
+        master_file = "master/item_master.xlsx"
+
+        if master_file.endswith(".csv"):
+
+            item_master = pd.read_csv(
+            master_file
+           )
+
+        else:
+
+            item_master = pd.read_excel(
+            master_file,
             engine="openpyxl"
-        )
+            )
 
         item_master = item_master.iloc[:, [1, 2]]
 
