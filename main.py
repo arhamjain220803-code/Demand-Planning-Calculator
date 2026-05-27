@@ -11,15 +11,11 @@ OUTPUT_FOLDER = "output"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-# =========================================
-# GLOBAL STORAGE
-# =========================================
-
 master_data = None
-final_dispatch_data = []
+manual_entries = []
 
 # =========================================
-# HOME PAGE
+# HOME
 # =========================================
 
 @app.route("/")
@@ -34,23 +30,23 @@ def home():
 def upload_files():
 
     global master_data
+    global manual_entries
 
     try:
+
+        manual_entries = []
 
         sales_file = request.files["sales_file"]
         inventory_file = request.files["inventory_file"]
 
-        sales_filename = secure_filename(sales_file.filename)
-        inventory_filename = secure_filename(inventory_file.filename)
-
         sales_path = os.path.join(
             UPLOAD_FOLDER,
-            sales_filename
+            secure_filename(sales_file.filename)
         )
 
         inventory_path = os.path.join(
             UPLOAD_FOLDER,
-            inventory_filename
+            secure_filename(inventory_file.filename)
         )
 
         sales_file.save(sales_path)
@@ -58,26 +54,20 @@ def upload_files():
 
         # =========================================
         # READ SALES FILE
-        # D = SKU
-        # E = TOTAL QTY
         # =========================================
-        # =========================================
-# READ SALES FILE
-# =========================================
 
         if sales_path.endswith(".csv"):
 
-           sales_df = pd.read_csv(
-           sales_path
-        )
+            sales_df = pd.read_csv(sales_path)
 
         else:
 
-           sales_df = pd.read_excel(
-           sales_path,
-           engine="openpyxl"
-        )
-        
+            sales_df = pd.read_excel(
+                sales_path,
+                engine="openpyxl"
+            )
+
+        # D and E columns
         sales_df = sales_df.iloc[:, [3, 4]]
 
         sales_df.columns = [
@@ -100,7 +90,7 @@ def upload_files():
         )
 
         # =========================================
-        # SALES SUMMARY
+        # GROUP SALES
         # =========================================
 
         sales_summary = (
@@ -108,10 +98,6 @@ def upload_files():
             .sum()
             .reset_index()
         )
-
-        # =========================================
-        # DEMAND CALCULATION
-        # =========================================
 
         DAYS = 60
 
@@ -151,9 +137,7 @@ def upload_files():
         )
 
         # =========================================
-        # READ INVENTORY FILE
-        # C = SKU
-        # M = INVENTORY
+        # INVENTORY FILE
         # =========================================
 
         if inventory_path.endswith(".csv"):
@@ -176,8 +160,6 @@ def upload_files():
             "Inventory"
         ]
 
-        inventory_df = inventory_df.dropna()
-
         inventory_df["SKU"] = (
             inventory_df["SKU"]
             .astype(str)
@@ -186,24 +168,20 @@ def upload_files():
         )
 
         # =========================================
-        # READ ITEM MASTER
-        # B = SKU
-        # C = ITEM NAME
+        # ITEM MASTER
         # =========================================
 
         master_file = "master/item_master.xlsx"
 
         if master_file.endswith(".csv"):
 
-            item_master = pd.read_csv(
-            master_file
-           )
+            item_master = pd.read_csv(master_file)
 
         else:
 
             item_master = pd.read_excel(
-            master_file,
-            engine="openpyxl"
+                master_file,
+                engine="openpyxl"
             )
 
         item_master = item_master.iloc[:, [1, 2]]
@@ -213,8 +191,6 @@ def upload_files():
             "Item_Name"
         ]
 
-        item_master = item_master.dropna()
-
         item_master["SKU"] = (
             item_master["SKU"]
             .astype(str)
@@ -223,7 +199,7 @@ def upload_files():
         )
 
         # =========================================
-        # MERGE SALES + INVENTORY
+        # MERGE
         # =========================================
 
         master_df = pd.merge(
@@ -232,10 +208,6 @@ def upload_files():
             on="SKU",
             how="left"
         )
-
-        # =========================================
-        # MERGE ITEM MASTER
-        # =========================================
 
         master_df = pd.merge(
             master_df,
@@ -286,9 +258,7 @@ def upload_files():
             .astype(int)
         )
 
-        # =========================================
         # SAVE MASTER CSV
-        # =========================================
 
         output_path = os.path.join(
             OUTPUT_FOLDER,
@@ -319,9 +289,7 @@ def upload_files():
 def bulk_search():
 
     global master_data
-
-    if master_data is None:
-        return "Please upload files first."
+    global manual_entries
 
     sku_text = request.form["sku_list"]
 
@@ -335,28 +303,81 @@ def bulk_search():
         master_data["SKU"].isin(sku_list)
     ]
 
+    results = filtered.to_dict(
+        orient="records"
+    )
+
+    results = manual_entries + results
+
     return render_template(
         "dashboard.html",
-        results=filtered.to_dict(
-            orient="records"
-        )
+        results=results
     )
 
 # =========================================
-# SAVE FINAL DISPATCH
+# MANUAL SKU
+# =========================================
+
+@app.route("/add_manual", methods=["POST"])
+def add_manual():
+
+    global manual_entries
+
+    sku = request.form["manual_sku"].upper()
+
+    qty = request.form["manual_qty"]
+
+    manual_row = {
+
+        "SKU": sku,
+        "Item_Name": "Manual Entry",
+        "Inventory": "",
+        "ABC": "MANUAL",
+        "Stock_Required": qty
+
+    }
+
+    manual_entries.insert(0, manual_row)
+
+    return render_template(
+        "dashboard.html",
+        results=manual_entries
+    )
+
+# =========================================
+# SAVE FINAL CSV
 # =========================================
 
 @app.route("/save_dispatch", methods=["POST"])
 def save_dispatch():
 
-    global final_dispatch_data
+    global master_data
+    global manual_entries
 
     skus = request.form.getlist("sku")
     qtys = request.form.getlist("final_qty")
 
     dispatch_list = []
 
+    # MANUAL ENTRIES FIRST
+    for row in manual_entries:
+
+        dispatch_list.append({
+
+            "SKU": row["SKU"],
+            "Item_Name": row["Item_Name"],
+            "Final_Qty": row["Stock_Required"]
+
+        })
+
+    # NORMAL ENTRIES
     for sku, qty in zip(skus, qtys):
+
+        if qty.strip() == "":
+            continue
+
+        if float(qty) == 0:
+            continue
 
         item_row = master_data[
             master_data["SKU"] == sku
@@ -365,6 +386,7 @@ def save_dispatch():
         item_name = ""
 
         if not item_row.empty:
+
             item_name = item_row.iloc[0][
                 "Item_Name"
             ]
@@ -380,8 +402,6 @@ def save_dispatch():
     dispatch_df = pd.DataFrame(
         dispatch_list
     )
-
-    final_dispatch_data = dispatch_df
 
     output_path = os.path.join(
         OUTPUT_FOLDER,
@@ -399,113 +419,37 @@ def save_dispatch():
     )
 
 # =========================================
-# ADD MANUAL SKU
-# =========================================
-
-@app.route("/add_manual", methods=["POST"])
-def add_manual():
-
-    global final_dispatch_data
-
-    manual_sku = request.form[
-        "manual_sku"
-    ].upper()
-
-    manual_qty = request.form[
-        "manual_qty"
-    ]
-
-    item_name = ""
-
-    if master_data is not None:
-
-        row = master_data[
-            master_data["SKU"]
-            == manual_sku
-        ]
-
-        if not row.empty:
-
-            item_name = row.iloc[0][
-                "Item_Name"
-            ]
-
-    new_row = pd.DataFrame([{
-
-        "SKU": manual_sku,
-        "Item_Name": item_name,
-        "Final_Qty": manual_qty
-
-    }])
-
-    if isinstance(
-        final_dispatch_data,
-        list
-    ):
-
-        final_dispatch_data = new_row
-
-    else:
-
-        final_dispatch_data = pd.concat(
-            [
-                final_dispatch_data,
-                new_row
-            ],
-            ignore_index=True
-        )
-
-    output_path = os.path.join(
-        OUTPUT_FOLDER,
-        "final_dispatch.csv"
-    )
-
-    final_dispatch_data.to_csv(
-        output_path,
-        index=False
-    )
-
-    return render_template(
-        "dashboard.html",
-        results=[]
-    )
-
-# =========================================
-# DOWNLOAD MASTER CSV
+# DOWNLOAD MASTER
 # =========================================
 
 @app.route("/download_master")
 def download_master():
 
-    output_path = os.path.join(
-        OUTPUT_FOLDER,
-        "replenishment_output.csv"
-    )
-
     return send_file(
-        output_path,
+        os.path.join(
+            OUTPUT_FOLDER,
+            "replenishment_output.csv"
+        ),
         as_attachment=True
     )
 
 # =========================================
-# DOWNLOAD FINAL CSV
+# DOWNLOAD FINAL
 # =========================================
 
 @app.route("/download_final")
 def download_final():
 
-    output_path = os.path.join(
-        OUTPUT_FOLDER,
-        "final_dispatch.csv"
-    )
-
     return send_file(
-        output_path,
+        os.path.join(
+            OUTPUT_FOLDER,
+            "final_dispatch.csv"
+        ),
         as_attachment=True
     )
 
 # =========================================
-# RUN APP
+# RUN
 # =========================================
 
 if __name__ == "__main__":

@@ -10,17 +10,10 @@
 
     <style>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
         body{
             font-family:'Poppins',sans-serif;
-            background:#f3f6fb;
+            background:#f4f7fb;
             padding:40px;
-            color:#1f2937;
         }
 
         .container{
@@ -28,64 +21,35 @@
             margin:auto;
         }
 
-        .header{
-            background:linear-gradient(135deg,#2563eb,#1e3a8a);
-            color:white;
-            padding:35px;
-            border-radius:20px;
-            margin-bottom:30px;
-        }
-
-        .header h1{
-            font-size:34px;
-        }
-
         .card{
             background:white;
             padding:30px;
             border-radius:20px;
             margin-bottom:30px;
-            box-shadow:0 6px 25px rgba(0,0,0,0.08);
+            box-shadow:0 6px 20px rgba(0,0,0,0.08);
         }
 
-        h2{
-            margin-bottom:20px;
+        h1{
             color:#1e3a8a;
         }
 
         textarea{
             width:100%;
             height:180px;
-            border-radius:14px;
-            border:1px solid #d1d5db;
-            padding:16px;
-            font-size:15px;
-        }
-
-        .search-btn,
-        .save-btn,
-        .manual-btn{
-            border:none;
-            padding:14px 24px;
+            padding:15px;
             border-radius:12px;
-            color:white;
-            font-weight:600;
-            cursor:pointer;
+            border:1px solid #d1d5db;
         }
 
-        .search-btn{
+        button{
+            padding:14px 24px;
+            border:none;
+            border-radius:12px;
             background:#2563eb;
-            margin-top:20px;
-        }
-
-        .save-btn{
-            background:#10b981;
-            width:100%;
-            margin-top:20px;
-        }
-
-        .manual-btn{
-            background:#7c3aed;
+            color:white;
+            cursor:pointer;
+            margin-top:15px;
+            font-weight:600;
         }
 
         table{
@@ -97,35 +61,16 @@
         th{
             background:#1e40af;
             color:white;
-            padding:16px;
+            padding:14px;
         }
 
         td{
-            padding:14px;
+            padding:12px;
             border-bottom:1px solid #e5e7eb;
         }
 
         tr:hover{
             background:#f9fafb;
-        }
-
-        .badge{
-            padding:8px 12px;
-            border-radius:20px;
-            color:white;
-            font-size:12px;
-        }
-
-        .A{
-            background:#ef4444;
-        }
-
-        .B{
-            background:#f59e0b;
-        }
-
-        .C{
-            background:#10b981;
         }
 
         .qty-input{
@@ -135,29 +80,12 @@
             border:1px solid #d1d5db;
         }
 
-        .manual-form{
-            display:flex;
-            gap:15px;
-            flex-wrap:wrap;
-        }
-
-        .manual-form input{
-            padding:12px;
-            border-radius:10px;
-            border:1px solid #d1d5db;
-        }
-
-        .download-buttons{
-            display:flex;
-            gap:20px;
-        }
-
-        .download-buttons a{
-            text-decoration:none;
-            background:#2563eb;
-            color:white;
-            padding:14px 22px;
+        .filter-box{
+            width:100%;
+            padding:14px;
             border-radius:12px;
+            border:1px solid #d1d5db;
+            margin-bottom:20px;
         }
 
     </style>
@@ -168,30 +96,50 @@
 
 <div class="container">
 
-    <div class="header">
-
-        <h1>Demand Planning Calculator</h1>
-
-    </div>
-
     <div class="card">
 
-        <h2>Bulk SKU Search</h2>
+        <h1>Demand Planning Calculator</h1>
 
         <form action="/bulk_search" method="POST">
 
             <textarea
                 name="sku_list"
                 placeholder="Enter SKUs line by line"
-                required
             ></textarea>
 
-            <button
-                type="submit"
-                class="search-btn"
-            >
+            <button type="submit">
 
                 Search SKUs
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Manual SKU Entry</h2>
+
+        <form action="/add_manual" method="POST">
+
+            <input
+                type="text"
+                name="manual_sku"
+                placeholder="SKU"
+                required
+            >
+
+            <input
+                type="number"
+                name="manual_qty"
+                placeholder="Qty"
+                required
+            >
+
+            <button type="submit">
+
+                Add Manual SKU
 
             </button>
 
@@ -202,6 +150,13 @@
     {% if results %}
 
     <div class="card">
+
+        <input
+            type="text"
+            id="tableSearch"
+            class="filter-box"
+            placeholder="Filter SKU or Item Name..."
+        >
 
         <form action="/save_dispatch" method="POST">
 
@@ -215,7 +170,7 @@
                         <th>Item Name</th>
                         <th>Inventory</th>
                         <th>ABC</th>
-                        <th>Recommended Qty</th>
+                        <th>Suggested Qty</th>
                         <th>Final Qty</th>
 
                     </tr>
@@ -254,11 +209,7 @@
 
                         <td>
 
-                            <span class="badge {{ row['ABC'] }}">
-
-                                {{ row["ABC"] }}
-
-                            </span>
+                            {{ row["ABC"] }}
 
                         </td>
 
@@ -273,7 +224,6 @@
                             <input
                                 type="number"
                                 name="final_qty"
-                                value="{{ row['Stock_Required'] }}"
                                 class="qty-input"
                             >
 
@@ -287,12 +237,9 @@
 
             </table>
 
-            <button
-                type="submit"
-                class="save-btn"
-            >
+            <button type="submit">
 
-                Download Final Dispatch CSV
+                Download Final CSV
 
             </button>
 
@@ -302,66 +249,50 @@
 
     {% endif %}
 
-    <div class="card">
-
-        <h2>Manual SKU Entry</h2>
-
-        <form action="/add_manual" method="POST">
-
-            <div class="manual-form">
-
-                <input
-                    type="text"
-                    name="manual_sku"
-                    placeholder="SKU"
-                    required
-                >
-
-                <input
-                    type="number"
-                    name="manual_qty"
-                    placeholder="Quantity"
-                    required
-                >
-
-                <button
-                    type="submit"
-                    class="manual-btn"
-                >
-
-                    Add Manual SKU
-
-                </button>
-
-            </div>
-
-        </form>
-
-    </div>
-
-    <div class="card">
-
-        <h2>Downloads</h2>
-
-        <div class="download-buttons">
-
-            <a href="/download_master">
-
-                Download Master CSV
-
-            </a>
-
-            <a href="/download_final">
-
-                Download Final CSV
-
-            </a>
-
-        </div>
-
-    </div>
-
 </div>
+
+<script>
+
+const searchInput =
+    document.getElementById("tableSearch");
+
+if(searchInput){
+
+    searchInput.addEventListener(
+        "keyup",
+        function(){
+
+            let filter =
+                this.value.toLowerCase();
+
+            let rows =
+                document.querySelectorAll(
+                    "tbody tr"
+                );
+
+            rows.forEach(function(row){
+
+                let text =
+                    row.innerText.toLowerCase();
+
+                if(text.includes(filter)){
+
+                    row.style.display = "";
+
+                }else{
+
+                    row.style.display = "none";
+
+                }
+
+            });
+
+        }
+    );
+
+}
+
+</script>
 
 </body>
 
