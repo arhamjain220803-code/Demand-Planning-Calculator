@@ -124,7 +124,7 @@
         <form action="/add_manual" method="POST">
 
             <input
-                type="text"
+                type="text" 
                 name="manual_sku"
                 placeholder="SKU"
                 required
@@ -291,6 +291,50 @@ if(searchInput){
     );
 
 }
+
+</script>
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const qtyInputs =
+            document.querySelectorAll(
+                ".qty-input"
+            );
+
+        qtyInputs.forEach(
+            (input, index) => {
+
+                input.addEventListener(
+                    "keydown",
+                    function(e){
+
+                        if(e.key === "Enter"){
+
+                            e.preventDefault();
+
+                            let nextInput =
+                                qtyInputs[index + 1];
+
+                            if(nextInput){
+
+                                nextInput.focus();
+
+                            }
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
 
 </script>
 

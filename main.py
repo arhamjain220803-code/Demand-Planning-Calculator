@@ -13,6 +13,7 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 master_data = None
 manual_entries = []
+current_results = []
 
 # =========================================
 # HOME
@@ -290,6 +291,7 @@ def bulk_search():
 
     global master_data
     global manual_entries
+    global current_results
 
     sku_text = request.form["sku_list"]
 
@@ -307,7 +309,10 @@ def bulk_search():
         orient="records"
     )
 
+    # ADD MANUAL ENTRIES ALSO
     results = manual_entries + results
+
+    current_results = results
 
     return render_template(
         "dashboard.html",
@@ -322,26 +327,49 @@ def bulk_search():
 def add_manual():
 
     global manual_entries
+    global master_data
+    global current_results
 
-    sku = request.form["manual_sku"].upper()
+    sku = request.form[
+        "manual_sku"
+    ].upper()
 
-    qty = request.form["manual_qty"]
+    qty = request.form[
+        "manual_qty"
+    ]
+
+    # FIND ITEM NAME FROM MASTER
+    item_name = "Manual Entry"
+
+    row = master_data[
+        master_data["SKU"] == sku
+    ]
+
+    if not row.empty:
+
+        item_name = row.iloc[0][
+            "Item_Name"
+        ]
 
     manual_row = {
 
         "SKU": sku,
-        "Item_Name": "Manual Entry",
+        "Item_Name": item_name,
         "Inventory": "",
         "ABC": "MANUAL",
         "Stock_Required": qty
 
     }
 
-    manual_entries.insert(0, manual_row)
+    # ADD TO MANUAL LIST
+    manual_entries.append(manual_row)
+
+    # APPEND TO CURRENT TABLE
+    current_results.append(manual_row)
 
     return render_template(
         "dashboard.html",
-        results=manual_entries
+        results=current_results
     )
 
 # =========================================
