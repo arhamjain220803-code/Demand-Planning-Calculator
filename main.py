@@ -12,6 +12,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 master_data = None
+item_master_global = None
 manual_entries = []
 current_results = []
 
@@ -32,6 +33,7 @@ def upload_files():
 
     global master_data
     global manual_entries
+    global item_master_global
 
     try:
 
@@ -198,29 +200,34 @@ def upload_files():
             .str.upper()
             .str.strip()
         )
+        item_master_global = item_master.copy()
 
         # =========================================
-        # MERGE
+        # MERGE USING ITEM MASTER AS BASE
         # =========================================
 
+        master_df = item_master.copy()
         master_df = pd.merge(
+            master_df,
             sales_summary,
-            inventory_df,
             on="SKU",
             how="left"
         )
 
         master_df = pd.merge(
             master_df,
-            item_master,
+            inventory_df,
             on="SKU",
             how="left"
         )
 
-        master_df["Inventory"] = (
-            master_df["Inventory"]
-            .fillna(0)
-        )
+        master_df["Quantity"] = master_df["Quantity"].fillna(0)
+        master_df["Inventory"] = master_df["Inventory"].fillna(0)
+        master_df["Avg_Per_Day"] = master_df["Avg_Per_Day"].fillna(0)
+        master_df["Pareto"] = master_df["Pareto"].fillna(0)
+        master_df["ABC"] = master_df["ABC"].fillna("-")
+        master_df["Weighted_Avg"] = master_df["Weighted_Avg"].fillna(0)
+        master_df["Next_7_Days"] = master_df["Next_7_Days"].fillna(0)
 
         # =========================================
         # STOCK REQUIRED
@@ -296,18 +303,63 @@ def bulk_search():
     sku_text = request.form["sku_list"]
 
     sku_list = [
-        sku.strip().upper()
-        for sku in sku_text.splitlines()
-        if sku.strip()
+    sku.strip().upper()
+    for sku in sku_text.splitlines()
+    if sku.strip()
     ]
 
+    # Remove duplicates but keep order
+    sku_list = list(dict.fromkeys(sku_list))
+
     filtered = master_data[
-        master_data["SKU"].isin(sku_list)
-    ]
+        master_data["SKU"]
+        .astype(str)
+        .str.upper()
+        .isin(sku_list)
+    ].copy()
+
+    # Keep same order as typed
+    filtered["Sort_Order"] = filtered["SKU"].apply(
+        lambda x: sku_list.index(
+            str(x).upper()
+        )
+    )
+
+    filtered = filtered.sort_values(
+        by="Sort_Order"
+    )
+
+    filtered = filtered.drop(
+        columns=["Sort_Order"]
+    )
 
     results = filtered.to_dict(
         orient="records"
     )
+
+    # Add SKUs not found in master
+    found_skus = set(
+        filtered["SKU"]
+        .astype(str)
+        .str.upper()
+    )
+
+    for sku in sku_list:
+
+        if sku not in found_skus:
+
+            results.append({
+
+                "SKU": sku,
+                "Item_Name": "SKU Not Found",
+                "Inventory": "",
+                "ABC": "MANUAL",
+                "Stock_Required": ""
+
+            })
+            
+            
+            
 
     # ADD MANUAL ENTRIES ALSO
     results = manual_entries + results
@@ -317,7 +369,7 @@ def bulk_search():
     return render_template(
         "dashboard.html",
         results=results
-    )
+ )
 
 # =========================================
 # MANUAL SKU
@@ -329,6 +381,7 @@ def add_manual():
     global manual_entries
     global master_data
     global current_results
+    global item_master_global
 
     sku = request.form[
         "manual_sku"
@@ -341,8 +394,8 @@ def add_manual():
     # FIND ITEM NAME FROM MASTER
     item_name = "Manual Entry"
 
-    row = master_data[
-        master_data["SKU"] == sku
+    row = item_master_global[
+    item_master_global["SKU"] == sku
     ]
 
     if not row.empty:

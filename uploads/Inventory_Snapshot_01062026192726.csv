@@ -1,0 +1,139 @@
+Facility,Item Type Name,Item SkuCode,EAN,UPC,ISBN,Color,Size,Brand,Category Name,MRP,Open Sale,Inventory,Inventory Blocked,Bad Inventory,Putaway Pending,Pending Inventory Assessment,Stock In Transfer,Open Purchase,Enabled,Updated,Cost Price,Sub_category,Facility Code
+Frido_00016,Heel Cup (Men) - Frido,FR-HC-L,0612477538360,,,,large,FRIDO,Insole,1099.00,0,3,0,0,0,0,0,0,true,2026-06-01 18:01:11,69.00,Heel Pad,Frido_00016
+Frido_00016,Heel Cup (Women) - Frido,FR-HC-S,0612477565151,,,,Small,FRIDO,Insole,1099.00,0,3,0,0,0,0,0,0,true,2026-06-01 18:01:15,61.00,Heel Pad,Frido_00016
+Frido_00016,Frido Arch Support Insole- Small,FR-ASI-S,0612477565021,,,,Small,FRIDO,Insole,2799.00,0,4,0,0,0,0,0,0,true,2026-06-01 18:01:14,238.00,Arch Support Insole,Frido_00016
+Frido_00016,Frido Arch Support Insole-Large,FR-ASI-L,0612477565007,,,,large,FRIDO,Insole,2799.00,0,0,0,0,0,0,1,0,true,2026-05-15 16:35:28,238.00,Arch Support Insole,Frido_00016
+Frido_00016,"Frido Ultimate Sleep Pillow - Gel Cloud (Side Sleeping-4"")",FR-UNFP-M,,,,,4 Inch,FRIDO,Pillows,3999.00,0,15,0,0,0,0,2,0,true,2026-06-01 18:01:20,50.00,,Frido_00016
+Frido_00016,Frido Ultimate Pro Posture Corrector,FR-UPPC-G,,,,,Regular,FRIDO,Cushions,3999.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:22,420.00,,Frido_00016
+Frido_00016,Ultimate Car Neck Pillow - Black,FR-UCNP-B1,,,,Black,Regular,FRIDO,Pillows,1699.00,0,10,0,0,0,0,0,0,true,2026-06-01 18:02:19,220.00,,Frido_00016
+Frido_00016,Untimate Car Neck Pillow - Multi Colour (Grey and Black),FR-UCNP-GB1,,,,Grey & Black,Regular,FRIDO,Pillows,3500.00,0,7,0,0,0,0,0,0,true,2026-06-01 18:11:04,220.00,,Frido_00016
+Frido_00016,Frido Ultimate Car Backrest Cushion Grey,FR-UCBU-G1,,,,Grey,Regular,FRIDO,Cushions,0.00,0,3,0,0,0,0,4,0,true,2026-06-01 18:02:16,380.00,,Frido_00016
+Frido_00016,Frido Ultimate Car Backrest Cushion Black,FR-UCBU-B1,,,,Black,Regular,FRIDO,Cushions,0.00,0,10,0,0,0,0,0,0,true,2026-06-01 18:01:17,380.00,,Frido_00016
+Frido_00016,Frido Ultimate Wedge Cushion- White,FR-ULWC-W1,,,,White,Regular,FRIDO,Cushions,0.00,0,0,0,0,0,0,1,0,true,2026-05-14 17:55:30,490.00,,Frido_00016
+Frido_00016,Frido Memory Hi-Per Foam Insoles- Large,FR-MHFI-L1,0612477565168,,,,large,FRIDO,Insole,0.00,0,1,0,0,0,0,1,0,true,2026-06-01 18:01:30,85.00,Memory Hi-Per Foam Insoles,Frido_00016
+Frido_00016,Frido Memory Hi-Per Foam Insoles- Small,FR-MHFI-S1,0612477565175,,,,Small,FRIDO,Insole,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:31,85.00,Memory Hi-Per Foam Insoles,Frido_00016
+Frido_00016,Frido Ultimate Neck Contour Cervical Plus Pillow Premium Blue,FR-OCVP-PB-L1,,,,Blue,Regular,FRIDO,Pillows,0.00,0,5,0,0,0,0,1,0,true,2026-06-01 18:10:58,485.00,,Frido_00016
+Frido_00016,Frido Dual Gel Pro Insoles - Large,FR-DGPI-L1,0612477565113,,,,large,FRIDO,Insole,0.00,0,4,0,0,0,0,0,0,true,2026-06-01 18:00:43,0.00,Dual Gel Pro Insoles,Frido_00016
+Frido_00016,Frido Dual Gel Pro Insoles - Small,FR-DGPI-S1,0612477565120,,,,Small,FRIDO,Insole,0.00,0,7,0,0,0,0,1,0,true,2026-06-01 18:00:45,0.00,Dual Gel Pro Insoles,Frido_00016
+Frido_00016,Frido Ultimate Mattress Topper - Single / 6' x 3',FR-ULMT72X36X2,,,,,Single,FRIDO,Mattress Topper,0.00,0,1,0,0,0,0,0,0,true,2026-06-01 18:10:44,3999.00,,Frido_00016
+Frido_00016,Frido Ultimate Wedge Plus Cushion- Black,FR-ULWC-PL-B1,,,,Black,Regular,FRIDO,Cushions,0.00,0,1,0,0,0,0,0,0,true,2026-06-01 18:10:38,500.00,,Frido_00016
+Frido_00016,Frido Active Socks Cyan - Small,FR-ASC-S1,,,,Cyan,,FRIDO,Socks,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:06,0.00,,Frido_00016
+Frido_00016,Frido Active Socks Cyan - Medium,FR-ASC-M1,,,,Cyan,,FRIDO,Socks,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:07,0.00,,Frido_00016
+Frido_00016,Frido Active Socks Cyan - Large,FR-ASC-L1,,,,Cyan,,FRIDO,Socks,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:04,0.00,,Frido_00016
+Frido_00016,Frido Active Socks Ash Blue - Medium,FR-ASAB-M1,,,,Ash Blue,,FRIDO,Socks,0.00,0,1,0,0,0,0,0,0,true,2026-06-01 18:01:02,0.00,,Frido_00016
+Frido_00016,Frido Active Socks Core Black - Medium,FR-ASCB-M1,,,,Core Black,,FRIDO,Socks,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:19,0.00,,Frido_00016
+Frido_00016,Frido Travel Neck Pillow Core Black,FR-TNP-CB1,,,,Core Black,,FRIDO,Pillows,3599.00,0,4,0,0,0,0,0,0,true,2026-06-01 18:11:11,0.00,,Frido_00016
+Frido_00016,Frido Travel Neck Pillow Pink,FR-TNP-P1,,,,Pink,,FRIDO,Pillows,3599.00,0,1,0,0,0,0,0,0,true,2026-06-01 18:02:30,0.00,,Frido_00016
+Frido_00016,Frido Ultimate Wedge Plus Cushion -  Mustard Yellow - MY,FR-ULWC-PL-MY1,,,,Mustard Yellow,Regular,FRIDO,Cushions,0.00,0,0,0,0,0,0,1,0,true,2026-05-20 15:13:04,490.00,,Frido_00016
+Frido_00016,Frido Ultimate Wedge Plus Cushion- Coffe Brown,FR-ULWC-PL-CB1,,,,Coffee Brown,Regular,FRIDO,Cushions,0.00,0,1,0,0,0,0,2,0,true,2026-06-01 18:11:09,490.00,,Frido_00016
+Frido_00016,Frido Cuddle Pillow- Tutu Pink,FR-CP-TP1,,,,Tutu Pink,,FRIDO,Pillows,0.00,0,0,0,0,0,0,2,0,true,2026-05-20 15:11:03,799.00,,Frido_00016
+Frido_00016,Frido Cuddle Pillow- Mocha Brown,FR-CP-MB1,,,,Mocha Brown,,FRIDO,Pillows,0.00,0,0,0,0,0,0,3,0,true,2026-05-20 15:11:02,799.00,,Frido_00016
+Frido_00016,Frido Cuddle Pillow- Pebble Grey,FR-CP-PG1,,,,Pebble Grey,,FRIDO,Pillows,0.00,0,0,0,0,0,0,2,0,true,2026-05-20 15:11:06,799.00,,Frido_00016
+Frido_00016,Frido Active Socks - Charcoal Grey - S1,FR-AS-CG-S1,,,,,,FRIDO,Socks,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:00:37,399.00,,Frido_00016
+Frido_00016,Frido Cloud Backrest Cushion - BLACK,FR-CLBC-B1,,,,BLACK,,FRIDO,Cushions,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:10:25,0.00,,Frido_00016
+Frido_00016,Frido Cloud Backrest Cushion - LILLY pad,FR-CLBC-LP1,,,,LILLY pad,,FRIDO,Cushions,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:00:51,0.00,,Frido_00016
+Frido_00016,Frido Active Socks - Ankle Length - Charcoal Grey - S,FR-AS-AL-CG-S1,,,,,,FRIDO,Socks,0.00,0,1,0,0,0,0,1,0,true,2026-06-01 18:01:55,0.00,,Frido_00016
+Frido_00016,Frido Active Socks - Ankle Length - Cyan -S,FR-AS-AL-C-S1,,,,,,FRIDO,Socks,0.00,0,1,0,0,0,0,1,0,true,2026-06-01 18:01:57,0.00,,Frido_00016
+Frido_00016,Frido Active Socks - Ankle Length - Neon Green - S,FR-AS-AL-NG-S1,,,,,,FRIDO,Socks,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:02:04,0.00,,Frido_00016
+Frido_00016,Frido Active Socks - Ankle Length� - Core Black - S,FR-AS-AL-CB-S1,,,,,,FRIDO,Socks,0.00,0,1,0,0,0,0,0,0,true,2026-06-01 18:02:01,0.00,,Frido_00016
+Frido_00016,Frido Cuddle Pillow- Yellow,FR-CP-Y1,,,,Yellow,,FRIDO,Pillows,0.00,0,0,0,0,0,0,2,0,true,2026-05-20 15:12:38,0.00,,Frido_00016
+Frido_00016,Frido Mouse Wrist Support - Left,FR-MWS-L1,,,,,,FRIDO,Orthotics,0.00,0,1,0,0,0,0,1,0,true,2026-06-01 18:02:46,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Knee Cap Support- Black-M,FR-OKCS-BLK-M1,,,,,,FRIDO,Orthotics,0.00,0,1,0,0,0,0,1,0,true,2026-06-01 18:01:39,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Knee Cap Support Black-L,FR-OKCS-BLK-L1,,,,,,FRIDO,Orthotics,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:46,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Knee Cap Support Black-XL,FR-OKCS-BLK-XL1,,,,,,FRIDO,Orthotics,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:47,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Knee Cap Support- Grey-M,FR-OKCS-GRY-M1,,,,,,FRIDO,Orthotics,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:44,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Knee Cap Support Grey-L,FR-OKCS-GRY-L1,,,,,,FRIDO,Orthotics,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:45,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Knee Cap Support- Blue-M,FR-OKCS-BLU-M1,,,,,,FRIDO,Orthotics,0.00,0,1,0,0,0,0,1,0,true,2026-06-01 18:01:54,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Knee Cap Support- Blue-XL,FR-OKCS-BLU-XL1,,,,,,FRIDO,Orthotics,0.00,0,1,0,0,0,0,1,0,true,2026-06-01 18:01:50,0.00,,Frido_00016
+Frido_00016,Frido Silicone Gel Insole  L - Transparent,FR-SGI-TP-L1,0612477693328,,,,,FRIDO,Insole,0.00,0,3,0,0,0,0,1,0,true,2026-06-01 18:02:31,0.00,Silicone Gel Insole,Frido_00016
+Frido_00016,Frido Silicone Gel Insole  L - Beige,FR-SGI-BE-L1,0612477693045,,,,,FRIDO,Insole,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:02:42,0.00,Silicone Gel Insole,Frido_00016
+Frido_00016,Frido Silicone Gel Insole  L - Grey,FR-SGI-G-L1,0612477693069,,,,,FRIDO,Insole,0.00,0,6,0,0,0,0,0,0,true,2026-06-01 18:02:43,0.00,Silicone Gel Insole,Frido_00016
+Frido_00016,Frido Orthopaedic Heel Pad Pro  L - Beige,FR-OHPP-BE-L1,,,,,,FRIDO,Insole,0.00,0,3,0,0,0,0,1,0,true,2026-06-01 18:02:39,0.00,Heel Pad Pro,Frido_00016
+Frido_00016,Frido Orthotics Lumbo Sacral Belt New - XL,FR-OLSC-N-XL1,,,,,,FRIDO,Orthotics,0.00,0,0,0,0,0,0,4,0,true,2026-05-30 21:00:45,0.00,,Frido_00016
+Frido_00016,Frido Cloud Seat Cushion-Pebble Grey-Small,FR-CSC-PG-S1,,,,,,FRIDO,Cushions,0.00,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:37,0.00,,Frido_00016
+Frido_00016,Frido Cloud Seat Cushion-Black-Small,FR-CSC-B-S1,,,,,,FRIDO,Cushions,0.00,0,0,0,0,0,0,2,0,true,2026-05-20 15:11:35,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Posture Corrector - S,FR-OPC-S1,,,,,,FRIDO,Orthotics,0.00,0,10,0,0,0,0,0,0,true,2026-06-01 18:01:52,0.00,,Frido_00016
+Frido_00016,Frido Orthotics Posture Corrector M,FR-OPC-M1,,,,,,FRIDO,Orthotics,0.00,0,4,0,0,0,0,6,0,true,2026-06-01 18:01:53,0.00,,Frido_00016
+Frido_00016,Frido Leg elevation Pillow – White and Grey,FR-LEP-WG1,,,,,,FRIDO,Pillows,,0,1,0,0,0,0,0,0,true,2026-06-01 18:00:20,,,Frido_00016
+Frido_00016,Frido Knee Pillow – Grey,FR-KP-G1,,,,,,FRIDO,Pillows,,0,1,0,0,0,0,0,0,true,2026-06-01 18:02:34,,,Frido_00016
+Frido_00016,Frido Cloud comfort Slippers - Soft peach-UK-9,FR-CCS-09-SP1,,,,Soft peach,9,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:48,,,Frido_00016
+Frido_00016,Frido Cloud comfort Slippers - Soft peach-UK-10,FR-CCS-10-SP1,,,,Soft peach,10,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:10:47,,,Frido_00016
+Frido_00016,Frido Cloud comfort Slippers - Charcoal Black-UK-7,FR-CCS-07-CB1,,,,Charcoal Black,7,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:38,,,Frido_00016
+Frido_00016,Frido Cloud comfort Slippers - Charcoal Black-UK-9,FR-CCS-09-CB1,,,,Charcoal Black,9,FRIDO,Footwear ,,0,1,0,0,0,0,1,0,true,2026-06-01 18:01:42,,,Frido_00016
+Frido_00016,Frido Cloud comfort Slippers - Charcoal Black-UK-10,FR-CCS-10-CB1,,,,Charcoal Black,10,FRIDO,Footwear ,,0,1,0,0,0,0,1,0,true,2026-06-01 18:10:59,,,Frido_00016
+Frido_00016,Frido Cloud comfort Slippers - Olive Green-UK-9,FR-CCS-09-OG1,,,,Olive Green,9,FRIDO,Footwear ,,0,0,0,0,0,0,2,0,true,2026-05-21 12:11:52,,,Frido_00016
+Frido_00016,Frido Cloud Comfort Arch Support Slippers - Soft Peach-9UK,FR-CCASS-09-SP1,,,,Soft Peach,9,FRIDO,Footwear ,,0,1,0,0,0,0,1,0,true,2026-06-01 18:11:08,,,Frido_00016
+Frido_00016,Active socks (quarter length) - Core White -M (UK 6-9),FR-AS-QL-CW-M,,,,,,FRIDO,Socks,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:36,,,Frido_00016
+Frido_00016,Frido Nasal Strip - Pack of 30,FR-NS-30,,,,,,FRIDO,Orthotics,,0,0,0,0,0,0,5,0,true,2026-05-15 16:50:44,,Nasal Strip 	,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Black-7,FR-PC-M-B-7,,,,Black,,FRIDO,Footwear ,,0,0,0,0,0,0,2,0,true,2026-05-20 15:14:51,,,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Black-8,FR-PC-M-B-8,,,,Black,,FRIDO,Footwear ,,0,0,0,0,0,0,2,0,true,2026-05-20 15:14:51,,,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Black-9,FR-PC-M-B-9,,,,Black,,FRIDO,Footwear ,,0,0,0,0,0,0,0,0,true,2026-05-20 15:14:50,,,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Tan-7,FR-PC-M-T-7,,,,Tan,,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-20 15:14:48,,,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Tan-8,FR-PC-M-T-8,,,,Tan,,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-20 15:08:37,,,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Burgundy-7,FR-PC-M-BG-7,,,,Burgundy,,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-20 15:15:16,,,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Burgundy-8,FR-PC-M-BG-8,,,,Burgundy,,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:11:08,,,Frido_00016
+Frido_00016,Frido Puneri Chappal - Men - Burgundy-9,FR-PC-M-BG-9,,,,Burgundy,,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-20 15:15:08,,,Frido_00016
+Frido_00016,Frido Cloud Comfort Shoes - Without lace- Olive UK 7,FR-CCSWL-O-7,,,,Olive,7,FRIDO,Footwear ,,0,1,0,0,0,0,1,0,true,2026-06-01 18:10:42,,,Frido_00016
+Frido_00016,Frido Cloud Comfort Shoes - Without lace- Olive UK 8,FR-CCSWL-O-8,,,,Olive,8,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:35,,,Frido_00016
+Frido_00016,Frido Cloud Comfort Shoes - Without lace- Olive UK 9,FR-CCSWL-O-9,,,,Olive,9,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:33,,,Frido_00016
+Frido_00016,Frido Cloud Comfort Shoes - Without lace- Olive UK 10,FR-CCSWL-O-10,,,,Olive,10,FRIDO,Footwear ,,0,0,0,0,0,0,2,0,true,2026-05-20 15:13:40,,,Frido_00016
+Frido_00016,Frido Women's Arch Comfort Sandals - Dark Silver-4,FR-WACS-DS-4,,,,Dark Silver,4,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:11:04,50.00,,Frido_00016
+Frido_00016,Frido x HRX Barefoot Sock Shoe Pro-XS,FR-HRX-BFSS-XS1,,,,,XS,FRIDO,Footwear ,,0,3,0,0,0,0,0,0,true,2026-06-01 18:01:23,,,Frido_00016
+Frido_00016,Frido x HRX Barefoot Sock Shoe Pro-S,FR-HRX-BFSS-S1,,,,,S,FRIDO,Footwear ,,0,3,0,0,0,0,0,0,true,2026-06-01 18:01:23,,,Frido_00016
+Frido_00016,Frido x HRX Barefoot Sock Shoe Pro-M,FR-HRX-BFSS-M1,,,,,M,FRIDO,Footwear ,,0,3,0,0,0,0,0,0,true,2026-06-01 18:01:22,,,Frido_00016
+Frido_00016,Frido x HRX Barefoot Sock Shoe Pro-L,FR-HRX-BFSS-L1,,,,,L,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:20,,,Frido_00016
+Frido_00016,Frido 3D Eye Mask - Black,FR-3DEM-B1,,,,Black,,FRIDO,Eye Mask,,0,2,0,0,0,0,0,0,true,2026-06-01 18:02:25,,3D Eye Mask,Frido_00016
+Frido_00016,Frido 3D Eye Mask - Pink,FR-3DEM-P1,,,,Pink,,FRIDO,Eye Mask,,0,2,0,0,0,0,0,0,true,2026-06-01 18:02:24,,3D Eye Mask,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Rose Pink UK-4,FR-WECFS-RP-4,,,,,,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:01:59,50.00,,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Rose Pink UK-6,FR-WECFS-RP-6,,,,,,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:01:58,50.00,,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Rose Pink UK-7,FR-WECFS-RP-7,,,,,,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:10:52,50.00,,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Rose Pink UK-8,FR-WECFS-RP-8,,,,,,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-20 15:16:48,50.00,,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Satin Gold UK-4,FR-WECFS-SG-4,,,,,,FRIDO,Footwear ,,0,0,0,0,0,0,0,0,true,2026-05-20 15:16:47,50.00,,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Satin Gold UK-5,FR-WECFS-SG-5,,,,,,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:10:46,50.00,,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Satin Gold UK-6,FR-WECFS-SG-6,,,,,,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:01:49,50.00,,Frido_00016
+Frido_00016,Frido Women's Ethnic Comfort Flat Sandal - Satin Gold UK-8,FR-WECFS-SG-8,,,,,,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-20 15:16:45,50.00,,Frido_00016
+Frido_00016,Frido Knee Wrap - L�- Black,FR-KW-BLK-L1,,,,Black,,FRIDO,Orthotics,,0,2,0,0,0,0,0,0,true,2026-06-01 18:02:15,,,Frido_00016
+Frido_00016,Frido Kids Travel Neck Pillow - Bluish Grey,FR-KTNP-BG1,,,,Bluish Grey,,FRIDO,Pillows,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:24,,,Frido_00016
+Frido_00016,Frido Leg Elevation Pillow � �Black,FR-LEP-BL1,,,,Black,,FRIDO,Pillows,,0,2,0,0,0,0,0,0,true,2026-06-01 18:11:13,,,Frido_00016
+Frido_00016,Winter socks - Yellow(Small - Medium),FR-WS-Y-SM1,,,,,,FRIDO,Socks,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:29,,,Frido_00016
+Frido_00016,Kinesiology Tape - SKIN,FR-KT-S1,,,,,,FRIDO,Orthotics,,0,4,0,0,0,0,0,0,true,2026-06-01 18:02:23,,,Frido_00016
+Frido_00016,Kinesiology Tape - LIGHT BLUE,FR-KT-LB1,,,,,,FRIDO,Orthotics,,0,4,0,0,0,0,0,0,true,2026-06-01 18:02:21,,,Frido_00016
+Frido_00016,Frido Five Toe Socks - Universal Size / Shadow Black,FR-FTS-SB1,,,,,,FRIDO,Socks,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:57,,,Frido_00016
+Frido_00016,Frido Women's Cloud Comfort laceup� Shoes - Black UK6,FR-WCCLS-B-6,,,,Black,,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:02:28,,Cloud Comfort laceup�Shoes,Frido_00016
+Frido_00016,Frido Men's Dual Strap Comfort Sandal � Warm Brown UK� 7,FR-MDSCS-WBR-7,,,,Warm Brown,,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:10:55,,,Frido_00016
+Frido_00016,Frido Men's Dual Strap Comfort Sandal � Warm Brown UK� 10,FR-MDSCS-WBR-10,,,,Warm Brown,,FRIDO,Footwear ,,0,1,0,0,0,0,1,0,true,2026-06-01 18:02:27,,,Frido_00016
+Frido_00016,Frido Men's Dual Strap Comfort Sandal � Cloudy Grey UK� 9,FR-MDSCS-CGR-9,,,,Cloudy Grey,,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:11:10,,,Frido_00016
+Frido_00016,Frido Cold & Hot Therapy Cap � Purple,FR-CHTC-PPL1,,,,Purple,,FRIDO,Cap,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:28,,Therapy Cap,Frido_00016
+Frido_00016,Frido Active Walking shoe - Women's - Black-39,FR-AWS-W-6-B1,,,,Black,6,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:02:10,,,Frido_00016
+Frido_00016,Frido Active Walking shoe - Women's - Black-40,FR-AWS-W-7-B1,,,,Black,7,FRIDO,Footwear ,,0,3,0,0,0,0,2,0,true,2026-06-01 18:10:56,,,Frido_00016
+Frido_00016,Frido Active Walking shoe - Men's - Black-40,FR-AWS-M-6-B1,,,,Black,6,FRIDO,Footwear ,,0,3,0,0,0,0,0,0,true,2026-06-01 18:02:11,,,Frido_00016
+Frido_00016,Frido Active Walking shoe - Men's - Black-44,FR-AWS-M-10-B1,,,,Black,10,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:10:57,,,Frido_00016
+Frido_00016,Frido Premium Car Back Rest Cushion - Sahara Luxe Tan,FR-UCBU-SLT1,,,,,,FRIDO,Pillows,,0,4,0,0,0,0,0,0,true,2026-06-01 18:00:07,,,Frido_00016
+Frido_00016,Frido Premium Car Back Rest Cushion -Midnight Black,FR-UCBU-MB1,,,,,,FRIDO,Pillows,,0,4,0,0,0,0,0,0,true,2026-06-01 18:10:05,,,Frido_00016
+Frido_00016,Frido Premium Car Back Rest Cushion -Crimson Royale,FR-UCBU-CR1,,,,,,FRIDO,Pillows,,0,1,0,0,0,0,0,0,true,2026-06-01 18:00:10,,,Frido_00016
+Frido_00016,Frido Premium Car Back Rest Cushion -Arctic Ivory,FR-UCBU-AI1,,,,,,FRIDO,Pillows,,0,2,0,0,0,0,2,0,true,2026-06-01 18:00:12,,,Frido_00016
+Frido_00016,Frido Premium Car Neck Rest Cushion - Crimson Royale,FR-UCNP-CR1,,,,,,FRIDO,Pillows,,0,2,0,0,0,0,0,0,true,2026-06-01 18:00:14,,,Frido_00016
+Frido_00016,Frido Premium Car Neck Rest Cushion -Midnight BlacK,FR-UCNP-MB1,,,,,,FRIDO,Pillows,,0,3,0,0,0,0,1,0,true,2026-06-01 18:00:16,,,Frido_00016
+Frido_00016,Frido Premium Car Neck Rest Cushion -Arctic Ivory,FR-UCNP-AI1,,,,,,FRIDO,Pillows,,0,2,0,0,0,0,0,0,true,2026-06-01 18:00:22,,,Frido_00016
+Frido_00016,Frido Premium Car Neck Rest Cushion -Sahara Luxe Tan,FR-UCNP-SLT1,,,,,,FRIDO,Pillows,,0,5,0,0,0,0,0,0,true,2026-06-01 18:10:07,,,Frido_00016
+Frido_00016,Frido Premium Car Wedge Seat Cushion -Midnight Black,FR-UCWSC-MB1,,,,,,FRIDO,Pillows,,0,4,0,0,0,0,0,0,true,2026-06-01 18:10:09,,,Frido_00016
+Frido_00016,Frido Premium Car Wedge Seat Cushion -Arctic Ivory,FR-UCWSC-AI1,,,,,,FRIDO,Pillows,,0,0,0,0,0,0,1,0,true,2026-05-14 18:35:03,,,Frido_00016
+Frido_00016,Frido Premium Car Wedge Seat Cushion -Sahara Luxe Tan,FR-UCWSC-SLT1,,,,,,FRIDO,Pillows,,0,2,0,0,0,0,2,0,true,2026-06-01 18:00:30,,,Frido_00016
+Frido_00016,Frido Maternity Pillow Bundle Plus�- Baby Blue,FR-MP-BUNPL-BB1,,,,Baby Blue,,FRIDO,Pillows,,0,1,0,0,0,0,1,0,true,2026-06-01 18:11:07,,,Frido_00016
+Frido_00016,Frido Orthotics Heel Protector - Green - S,FR-OHP-GN-S1,,,,Green,S,FRIDO,Orthotics,,0,0,0,0,0,0,2,0,true,2026-05-23 13:25:17,,,Frido_00016
+Frido_00016,Frido Orthotics Heel Protector - Beige - L,FR-OHP-BG-L1,,,,Beige,L,FRIDO,Orthotics,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:01,,,Frido_00016
+Frido_00016,Frido Latex Pillow - Cooling Cover,FR-LP-CC-1,,,,,,FRIDO,Pillows,,0,3,0,0,0,0,0,0,true,2026-06-01 18:10:19,50.00,,Frido_00016
+Frido_00016,Frido Cloud Comfort Slippers - Navy Blue-12,FR-CCS-12-NB1,,,,Navy Blue,12,FRIDO,Footwear ,,0,0,0,0,0,0,0,0,true,2026-05-20 15:15:53,,,Frido_00016
+Frido_00016,Frido Women's�Ethnic�Comfort Flat Sandal - Mocca Mousse-5,FR-WECFS-MM-5,,,,Mocca Mousse,5,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-31 04:55:29,,,Frido_00016
+Frido_00016,Frido Women's�Ethnic�Comfort Flat Sandal - Mocca Mousse-7,FR-WECFS-MM-7,,,,Mocca Mousse,7,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-31 04:55:30,,,Frido_00016
+Frido_00016,Frido Women's�Ethnic�Comfort Flat Sandal - Mocca Mousse-8,FR-WECFS-MM-8,,,,Mocca Mousse,8,FRIDO,Footwear ,,0,1,0,0,0,0,0,0,true,2026-06-01 18:10:59,,,Frido_00016
+Frido_00016,Frido Wallet - Forest Brown,FR-CHW-BR1,,,,Forest Brown,,FRIDO,Wallet,,0,0,0,0,0,0,3,0,true,2026-05-21 15:06:56,,,Frido_00016
+Frido_00016,Frido Wallet - Carbon Leather,FR-CHW-CF1,,,,Carbon Leather,,FRIDO,Wallet,,0,0,0,0,0,0,2,0,true,2026-05-21 15:07:00,,,Frido_00016
+Frido_00016,Frido Wallet - Steel Grey,FR-CHW-GR1,,,,Steel Grey,,FRIDO,Wallet,,0,0,0,0,0,0,2,0,true,2026-05-21 15:07:01,,,Frido_00016
+Frido_00016,Frido Wallet - Smoke Black,FR-CHW-BL1,,,,Smoke Black,,FRIDO,Wallet,,0,0,0,0,0,0,3,0,true,2026-05-21 15:07:01,,,Frido_00016
+Frido_00016,Frido Active Casual sneakers - Olive green UK-5,FR-ACS-OLG-5,,,,Olive green,5,FRIDO,Footwear ,,0,1,0,0,0,0,1,0,true,2026-06-01 18:10:20,,,Frido_00016
+Frido_00016,Frido Active Casual sneakers - Olive green UK-6,FR-ACS-OLG-6,,,,Olive green,6,FRIDO,Footwear ,,0,0,0,0,0,0,2,0,true,2026-05-17 22:10:18,,,Frido_00016
+Frido_00016,Frido Active Casual sneakers - Olive green UK-10,FR-ACS-OLG-10,,,,Olive green,10,FRIDO,Footwear ,,0,1,0,0,0,0,1,0,true,2026-06-01 18:10:21,,,Frido_00016
+Frido_00016,Frido Active Casual sneakers - Aqua Blue UK-5,FR-ACS-AQB-5,,,,Aqua Blue,5,FRIDO,Footwear ,,0,2,0,0,0,0,0,0,true,2026-06-01 18:01:08,,,Frido_00016
+Frido_00016,Frido Active Casual sneakers - Aqua Blue UK-9,FR-ACS-AQB-9,,,,Aqua Blue,9,FRIDO,Footwear ,,0,0,0,0,0,0,2,0,true,2026-05-17 22:10:22,,,Frido_00016
+Frido_00016,Frido Active Casual sneakers - Off White UK-4,FR-ACS-OWH-4,,,,Off White,4,FRIDO,Footwear ,,0,0,0,0,0,0,1,0,true,2026-05-17 22:10:03,,,Frido_00016
